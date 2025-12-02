@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bicolano Recipes</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KZ3yYfIuLJrVN6aCMGN28AL/fOHnqd7qV3CyMfCVxYvBy06SnVAk0nnBYnOVrlaR271GGBqM3ZiZ+j1xQIDa3Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+
+  <!-- Back to top button -->
+  <button id="backToTop" class="btn btn-primary rounded-circle back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#home">
+        <i class="fa-solid fa-pepper-hot text-warning me-2"></i>
+        Bicolano Recipes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recipes">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative text-center text-white">
+      <p class="badge bg-primary bg-opacity-75 text-uppercase mb-3 small tracking-wide">
+        Taste of Bicol • Authentic Flavors • Spicy Stories
+      </p>
+      <h1 class="display-4 fw-bold mb-3 hero-title">
+        Bicolano Recipes
+      </h1>
+      <p class="lead mb-4 mx-auto hero-subtitle">
+        Discover the bold, coconut-rich and chili-kissed dishes of Bicol. This site is created to educate, inspire, and
+        guide you through simple, step-by-step recipes of beloved Bicolano favorites.
+      </p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="#recipes" class="btn btn-primary btn-lg px-4 rounded-pill">
+          Explore Recipes
+        </a>
+        <a href="#about" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+          Learn About Bicolano Cuisine
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Recipes Section -->
+  <section id="recipes" class="py-5 section-bg">
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center" data-animate="fade-up">
+          <h2 class="section-title">Featured Bicolano Dishes</h2>
+          <p class="section-subtitle">
+            These iconic recipes capture the fiery spirit and comforting richness of Bicolano cooking. Click
+            **View Recipe** to see ingredients, steps, and tips.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Bicol Express -->
+        <div class="col-md-6 col-lg-3" data-animate="fade-up">
+          <div class="card recipe-card h-100 border-0 shadow-sm">
+            <div class="ratio ratio-4x3">
+              <img
+                src="https://panlasangpinoy.com/wp-content/uploads/2021/04/Bicol-Express-1-1024x683.jpg"
+                class="card-img-top" alt="Bicol Express dish">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Bicol Express</h5>
+              <p class="card-text flex-grow-1">
+                A spicy, creamy coconut stew made with pork, chilies, and shrimp paste, famous for its heat.
+              </p>
+              <button class="btn btn-outline-primary mt-2 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#bicolExpressModal">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laing -->
+        <div class="col-md-6 col-lg-3" data-animate="fade-up" data-animate-delay="100">
+          <div class="card recipe-card h-100 border-0 shadow-sm">
+            <div class="ratio ratio-4x3">
+              <img
+                src="https://kusinasecrets.com/wp-content/uploads/2024/11/u3317447599_httpss.mj_.runrzJY5AdW6LQ_top_down_view_of_Authent_136cae8e-1d96-4b4b-8417-693c972281cd_2.jpg"
+                class="card-img-top" alt="Laing dish">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Laing</h5>
+              <p class="card-text flex-grow-1">
+                Dried taro leaves slowly simmered in coconut milk, chilies, and aromatics for a rich, earthy flavor.
+              </p>
+              <button class="btn btn-outline-primary mt-2 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#laingModal">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pinangat -->
+        <div class="col-md-6 col-lg-3" data-animate="fade-up" data-animate-delay="200">
+          <div class="card recipe-card h-100 border-0 shadow-sm">
+            <div class="ratio ratio-4x3">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_7acfcLYvLcyDloNGC6xq3KS3nv_WzEv_RsicuXGYGvKb3JD0cvAEBdV7MfgkUsN0kMGIq2gnezQ6rJ-2SVC9vlXcoKbXcTUtGpCImg&s=10"
+                class="card-img-top" alt="Pinangat dish">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Pinangat</h5>
+              <p class="card-text flex-grow-1">
+                Layers of taro leaves, minced meat or fish, chilies and coconut milk, wrapped and gently steamed.
+              </p>
+              <button class="btn btn-outline-primary mt-2 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#pinangatModal">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kinalas -->
+        <div class="col-md-6 col-lg-3" data-animate="fade-up" data-animate-delay="300">
+          <div class="card recipe-card h-100 border-0 shadow-sm">
+            <div class="ratio ratio-4x3">
+              <img
+                src="https://i0.wp.com/www.angsarap.net/wp-content/uploads/2017/03/Kinalas-Wide.jpg"
+                class="card-img-top" alt="Kinalas noodle dish">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Kinalas</h5>
+              <p class="card-text flex-grow-1">
+                Noodle soup with tender shaved meat in a rich, slow-cooked broth, a comfort staple in Naga City.
+              </p>
+              <button class="btn btn-outline-primary mt-2 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#kinalasModal">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4 justify-content-center">
+        <div class="col-lg-8" data-animate="fade-right">
+          <h2 class="section-title">Why Bicolano Recipes Matter</h2>
+          <p class="mb-3">
+            Bicolano cuisine is known for its fearless use of chilies and coconut milk, symbolizing warmth, resilience,
+            and creativity. By learning these dishes, we preserve local culture while embracing flavors that are both
+            comforting and exciting.
+          </p>
+          <p class="mb-3">
+            This webpage is designed as a simple, student-friendly guide: clear steps, essential ingredients, and quick
+            tips so anyone can confidently cook at home. It’s meant to be a companion for curious food lovers and
+            beginners alike.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top footer-dark">
+    <div class="container text-center small">
+      <div class="mb-3">
+        <a href="#" class="text-decoration-none text-muted mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-decoration-none text-muted mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-decoration-none text-muted mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-decoration-none text-muted mx-2">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="text-muted"> <strong>Copyright 2025 - All rights reserved</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Recipe Modals -->
+
+  <!-- Bicol Express Modal -->
+  <div class="modal fade" id="bicolExpressModal" tabindex="-1" aria-labelledby="bicolExpressModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bicolExpressModalLabel">Bicol Express</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Bicol Express is one of the most popular dishes from the Bicol region, named after the train that once ran
+            from Manila to Bicol. It captures the region’s love for heat and coconut cream, combining pork, chilies, and
+            shrimp paste into a bold, comforting stew.
+          </p>
+          <h6>Ingredients</h6>
+          <ul>
+            <li>500 g pork belly, sliced into small strips</li>
+            <li>2 cups coconut milk</li>
+            <li>1 cup coconut cream (kakang gata)</li>
+            <li>5–8 long green chilies (siling haba), sliced</li>
+            <li>3–5 bird’s eye chilies (siling labuyo), chopped (adjust to taste)</li>
+            <li>1 medium onion, chopped</li>
+            <li>4 cloves garlic, minced</li>
+            <li>2 tbsp shrimp paste (bagoong alamang)</li>
+            <li>1 tbsp cooking oil</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+
+          <h6 class="mt-3">Steps</h6>
+          <ol>
+            <li>Heat oil in a pan over medium heat. Sauté garlic and onions until fragrant and translucent.</li>
+            <li>Add the pork and cook until lightly browned and natural oils are released.</li>
+            <li>Stir in the shrimp paste and cook for 2–3 minutes to develop flavor.</li>
+            <li>Pour in the coconut milk and bring to a gentle simmer. Add the green chilies.</li>
+            <li>Simmer uncovered until the pork is tender and the sauce has reduced slightly.</li>
+            <li>Add the coconut cream and bird’s eye chilies. Continue simmering until thick and rich.</li>
+            <li>Season with salt and pepper to taste. Serve hot with steamed rice.</li>
+          </ol>
+
+          <h6 class="mt-3">Cooking Tips</h6>
+          <ul>
+            <li>Adjust the number of chilies based on your heat tolerance. Start mild and add more as needed.</li>
+            <li>Let the coconut milk simmer gently—avoid high heat to prevent curdling.</li>
+            <li>For a lighter version, use leaner pork cuts or substitute with chicken.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Laing Modal -->
+  <div class="modal fade" id="laingModal" tabindex="-1" aria-labelledby="laingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="laingModalLabel">Laing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Laing is a classic Bicolano dish made from dried taro leaves simmered slowly in coconut milk and chilies.
+            Traditionally cooked low and slow, it produces a creamy, earthy, and slightly smoky flavor that pairs
+            perfectly with rice.
+          </p>
+          <h6>Ingredients</h6>
+          <ul>
+            <li>3 cups dried taro leaves (dahon ng gabi)</li>
+            <li>3 cups coconut milk</li>
+            <li>1 cup coconut cream</li>
+            <li>1 medium onion, sliced</li>
+            <li>4 cloves garlic, minced</li>
+            <li>1 thumb-sized ginger, sliced into strips</li>
+            <li>5–8 green chilies, sliced</li>
+            <li>3–5 bird’s eye chilies, chopped</li>
+            <li>2 tbsp dried fish or shrimp (optional)</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+
+          <h6 class="mt-3">Steps</h6>
+          <ol>
+            <li>In a pot, combine coconut milk, onion, garlic, ginger, and dried fish or shrimp if using. Bring to a
+              gentle simmer.</li>
+            <li>Add the green chilies and bird’s eye chilies. Simmer for a few minutes to infuse flavor.</li>
+            <li>Carefully layer the dried taro leaves on top—do not stir at this point.</li>
+            <li>Cover and simmer over low heat for 15–20 minutes, allowing the leaves to absorb the coconut milk.</li>
+            <li>Once softened, gently press the leaves into the sauce. Add coconut cream.</li>
+            <li>Continue cooking on low heat until thick and oily on top, stirring occasionally.</li>
+            <li>Season with salt and pepper. Serve with hot rice.</li>
+          </ol>
+
+          <h6 class="mt-3">Cooking Tips</h6>
+          <ul>
+            <li>Do not wash dried taro leaves directly under running water to avoid itchiness; lightly rinse if needed
+              and pat dry.</li>
+            <li>Low heat is key—slow cooking brings out a deeper, richer flavor.</li>
+            <li>You may add pork or dried fish for extra protein and umami.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pinangat Modal -->
+  <div class="modal fade" id="pinangatModal" tabindex="-1" aria-labelledby="pinangatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pinangatModalLabel">Pinangat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Pinangat, sometimes called “pinangat na laing,” is a Bicolano specialty from Camalig, Albay. It combines
+            minced meat or fish, chilies, and aromatics wrapped in taro leaves and gently cooked in coconut milk, forming
+            neat, flavorful bundles.
+          </p>
+          <h6>Ingredients</h6>
+          <ul>
+            <li>15–20 pieces taro leaves, whole and fresh</li>
+            <li>300 g ground pork or fish flakes</li>
+            <li>2 cups coconut milk</li>
+            <li>1 cup coconut cream</li>
+            <li>1 medium onion, chopped</li>
+            <li>3 cloves garlic, minced</li>
+            <li>5–8 green chilies, whole or sliced</li>
+            <li>Salt and pepper to taste</li>
+            <li>Kitchen twine or strips of taro stalks for tying (optional)</li>
+          </ul>
+
+          <h6 class="mt-3">Steps</h6>
+          <ol>
+            <li>In a bowl, combine ground pork or fish with onion, garlic, salt, and pepper. Mix well.</li>
+            <li>Lay a taro leaf flat and place a spoonful of filling in the center. Add a slice of chili if desired.</li>
+            <li>Fold the sides and roll into a neat parcel. Use additional leaves if needed for thickness.</li>
+            <li>Arrange the parcels in a pot, seam side down. Pour in the coconut milk and add remaining chilies.</li>
+            <li>Simmer gently over low heat until the filling is cooked and the sauce reduces.</li>
+            <li>Pour in the coconut cream and continue cooking until thick and slightly oily.</li>
+            <li>Serve the parcels with sauce spooned over hot rice.</li>
+          </ol>
+
+          <h6 class="mt-3">Cooking Tips</h6>
+          <ul>
+            <li>Use young taro leaves if possible for a more tender texture.</li>
+            <li>Do not boil vigorously—gentle simmering keeps the parcels intact.</li>
+            <li>You can stack multiple parcels; just ensure all are partially submerged in coconut milk.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kinalas Modal -->
+  <div class="modal fade" id="kinalasModal" tabindex="-1" aria-labelledby="kinalasModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="kinalasModalLabel">Kinalas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Kinalas is a beloved noodle dish from Naga City, featuring tender shaved meat from a slow-cooked head or
+            bone, served over noodles in a rich, savory broth. It’s usually topped with gravy, scallions, and sometimes a
+            soft-boiled egg.
+          </p>
+          <h6>Ingredients</h6>
+          <ul>
+            <li>500 g beef or pork bones with meat (for broth)</li>
+            <li>300 g egg noodles or miki noodles</li>
+            <li>1 medium onion, quartered</li>
+            <li>4 cloves garlic, crushed</li>
+            <li>1 bay leaf</li>
+            <li>Salt and pepper to taste</li>
+            <li>2 tbsp cooking oil</li>
+            <li>2 tbsp flour (for gravy)</li>
+            <li>2 cups broth (for gravy)</li>
+            <li>Spring onions, chopped (garnish)</li>
+            <li>Optional: boiled egg, toasted garlic, calamansi</li>
+          </ul>
+
+          <h6 class="mt-3">Steps</h6>
+          <ol>
+            <li>In a large pot, simmer the bones with onion, garlic, bay leaf, salt, and pepper until meat is very tender
+              and broth is flavorful.</li>
+            <li>Remove meat from the bones and shred or “shave” into small pieces. Set aside. Strain the broth.</li>
+            <li>Cook the noodles according to package instructions. Drain and set aside.</li>
+            <li>For the gravy, heat oil in a pan, add flour, and cook until lightly browned. Slowly whisk in broth until
+              smooth and slightly thickened.</li>
+            <li>To assemble, place noodles in a bowl, pour hot broth, top with shaved meat and gravy.</li>
+            <li>Garnish with spring onions, toasted garlic, and boiled egg if desired. Serve with calamansi on the side.
+            </li>
+          </ol>
+
+          <h6 class="mt-3">Cooking Tips</h6>
+          <ul>
+            <li>Long, slow simmering builds depth of flavor in the broth—don’t rush this step.</li>
+            <li>Use a mix of bones with marrow for a richer, silkier soup.</li>
+            <li>Adjust the thickness of the gravy based on preference by adding more broth or flour.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,306 @@
+/* Root variables for color palette and spacing */
+:root {
+  --bg-page: #f9fafb;
+  --bg-soft: #f3f4f6;
+  --bg-card: #ffffff;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.12);
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border-subtle: #e5e7eb;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.18);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #e0f2fe 0, #eff6ff 40%, #f9fafb 80%);
+  color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 8px 30px rgba(148, 163, 184, 0.24);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.03em;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--text-muted) !important;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #f97316, #facc15);
+  transition: width 0.2s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero section */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(to bottom, rgba(248, 250, 252, 0.15), rgba(15, 23, 42, 0.45)),
+    url("https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 55%),
+    radial-gradient(circle at bottom, rgba(244, 114, 182, 0.18), transparent 60%);
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  max-width: 760px;
+}
+
+.tracking-wide {
+  letter-spacing: 0.18em;
+}
+
+/******** Sections ********/
+.section-bg {
+  background: linear-gradient(to bottom, #eff6ff, #ffffff);
+}
+
+section#about {
+  background: linear-gradient(to bottom, #f9fafb, #e5f2ff);
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.recipe-card {
+  background: var(--bg-card);
+  border-radius: 1.3rem;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.22s ease-out, box-shadow 0.22s ease-out, border-color 0.22s ease-out;
+  border: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+.recipe-card img {
+  object-fit: cover;
+  transition: transform 0.35s ease-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.95);
+  border-color: rgba(56, 189, 248, 0.6) !important;
+}
+
+.recipe-card:hover img {
+  transform: scale(1.05);
+}
+
+.recipe-card .card-title {
+  font-weight: 600;
+}
+
+.recipe-card .card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(to right, #2563eb, #22c55e);
+  border: none;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(to right, #1d4ed8, #16a34a);
+  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.55);
+}
+
+.btn-outline-primary {
+  border-radius: 999px;
+  border-color: rgba(148, 163, 184, 0.6);
+  color: var(--accent);
+  background-color: #ffffff;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: linear-gradient(to right, #eff6ff, #dbeafe);
+  border-color: rgba(37, 99, 235, 0.6);
+  color: #1d4ed8;
+  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.4);
+}
+
+.btn-close {
+  filter: none;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s;
+  z-index: 1040;
+  background: radial-gradient(circle at top, #60a5fa, #22c55e);
+  border: none;
+  box-shadow: 0 12px 30px rgba(148, 163, 184, 0.9);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top i {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Footer */
+.footer-dark {
+  background: #ffffff;
+  color: var(--text-muted);
+}
+
+.footer-dark a:hover {
+  color: #e5e7eb !important;
+}
+
+/* Modals */
+.modal-content {
+  background: #ffffff;
+  color: #111827;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+}
+
+.modal-header {
+  border-bottom-color: rgba(229, 231, 235, 0.9);
+}
+
+.modal-body ul,
+.modal-body ol {
+  color: var(--text-muted);
+}
+
+.modal-body h6 {
+  margin-top: 0.75rem;
+}
+
+/* Scroll animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(-26px);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(26px);
+}
+
+[data-animate="fade-right"].animate-in,
+[data-animate="fade-left"].animate-in {
+  transform: translateX(0);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .hero-section {
+    background-attachment: scroll;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .back-to-top {
+    right: 1.1rem;
+    bottom: 1.1rem;
+  }
+}
+
+
